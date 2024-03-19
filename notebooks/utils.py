@@ -91,7 +91,7 @@ def get_ego_schema(opts=None):
         A list of dicts containing the dataset
     """
     question_data = load_json_from_web(DATA_PATHS['ego_schema_q'])
-    answer_data = load_json_from_web(DATA_PATHS['ego_schema_a_subset'])
+    answer_data = load_json_from_web(DATA_PATHS['ego_schema_subset_a'])
 
     question_data_filtered = [
         {**x, 'ans': answer_data[x["q_uid"]]}
