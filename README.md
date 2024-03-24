@@ -33,8 +33,8 @@ We provide two notebooks to explore our two modality-constrained variants. These
 The following results can be replicated using our notebooks.
 | Method   |       Backbone      | Acc (%) | Time (s) |
 |----------|:-------------------:|:-------:|:--------:|
-| LLM Only |   Llama-2-7b-Chat   |   17.4  |   0.89   |
-| LLM Only |     Gemma-7b-IT     |   45.8  |   2.38   |
+| LLM Only |   Llama-2-7b-Chat   |   17.4  |   0.72   |
+| LLM Only |     Gemma-7b-IT     |   45.8  |   1.84   |
 | LLM Only | Mistral-7B-Instruct |   45.8  |   0.41   |
 | SF-VLM   |    LLaVA-v1.5-13B   |   55.8  |   1.70   |
 
