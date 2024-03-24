@@ -30,7 +30,7 @@ We provide two notebooks to explore our two modality-constrained variants. These
 * LLM Only: [notebook](notebooks/llm_only.ipynb) 
 * Single Frame VLM: [notebook](notebooks/sf_vlm.ipynb) 
 
-The following results can be replicated using our notebooks.
+The following results on EgoSchema (500 video subset) dataset can be replicated using our notebooks.
 | Method   |       Backbone      | Acc (%) | Time (s) |
 |----------|:-------------------:|:-------:|:--------:|
 | LLM Only |   Llama-2-7b-Chat   |   17.4  |   0.72   |
@@ -44,8 +44,8 @@ Our full MVU framework requires EgoSchema videos for inference and involves mult
 Our proposed Likelihood Selection (LS) strategy for long-video understanding tasks is a standalone function that can be incorporated with other LLM-based frameworks. Two working examples of LS are presented in each of our notebooks in the above 
 section.
 
-Given access to network logits, LS can easily be implemented. We refer the reader to our `calc_loglikelihood` method in 
-`notebooks/utils.py` for the PyTorch implementation. Note that when applying in a different task, this selection setup maybe sensitive to the prompt nature and may require some handcrafting of the the textual prompts used to query the model (as is common for most LLM based setups). 
+Given access to network logits, LS can easily be implemented. We refer the reader to our [`calc_loglikelihood`](https://github.com/kahnchana/mvu/blob/master/notebooks/utils.py#L37) method in 
+`notebooks/utils.py` for the PyTorch implementation. Note that when applying in a different task, this selection setup may be sensitive to the prompt nature and could require some handcrafting of the the textual prompts used to query the model (as is common for most LLM based setups). 
 
 
 ## Installation 
