@@ -19,6 +19,12 @@ def prepare_inputs(image, datum, model_config, tokenizer, image_processor):
     qs = datum['question']
     prompt_list = datum['only_prompts']
 
+    # Setup conversation mode
+    model_name, conv_mode = "llava-v1.5-13b", "llava_v1"
+    if 'plain' in model_name and 'finetune' not in model_name.lower() and 'mmtag' not in conv_mode:
+        conv_mode = conv_mode + '_mmtag'
+        print(f'Plain model, but not using a mmtag prompt, auto switching to {conv_mode}.')
+    
     if model_config.mm_use_im_start_end:
         qs = DEFAULT_IM_START_TOKEN + DEFAULT_IMAGE_TOKEN + \
             DEFAULT_IM_END_TOKEN + '\n' + qs
@@ -30,7 +36,7 @@ def prepare_inputs(image, datum, model_config, tokenizer, image_processor):
     raw_prompts = []
     for prompt in prompt_list:
         # generate inputs
-        conv = conv_templates[args.conv_mode].copy()
+        conv = conv_templates[conv_mode].copy()
         conv.append_message(conv.roles[0], qs)
         conv.append_message(conv.roles[1], prompt)
         prompt = conv.get_prompt()
@@ -93,20 +99,14 @@ def prepare_inputs(image, datum, model_config, tokenizer, image_processor):
     return batch, raw_prompts
 
 
-def eval_model(args):
+def eval_model():
     
     # Load Model
     disable_torch_init()
     model_path = os.path.expanduser("liuhaotian/llava-v1.5-13b")
     model_name = get_model_name_from_path(model_path)
     tokenizer, model, image_processor, context_len = load_pretrained_model(
-        model_path, args.model_base, model_name)
-
-    # Setup conversation mode
-    if 'plain' in model_name and 'finetune' not in model_name.lower() and 'mmtag' not in args.conv_mode:
-        args.conv_mode = args.conv_mode + '_mmtag'
-        print(
-            f'It seems that this is a plain model, but it is not using a mmtag prompt, auto switching to {args.conv_mode}.')
+        model_path, None, model_name)
 
     # Load Data
     dataset = get_ego_schema()
