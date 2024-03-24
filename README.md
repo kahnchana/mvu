@@ -40,10 +40,12 @@ The following results can be replicated using our notebooks.
 
 Our full MVU framework requires EgoSchema videos for inference and involves multiple pretrained models. Refer to next section for using it. 
 
-## Likelihood Selection (LS)
+## Likelihood Selection 
+Our proposed Likelihood Selection (LS) strategy for long-video understanding tasks is a standalone function that can be incorporated with other LLM-based frameworks. Two working examples of LS are presented in each of our notebooks in the above 
+section.
+
 Given access to network logits, LS can easily be implemented. We refer the reader to our `calc_loglikelihood` method in 
-`notebooks/utils.py` for the PyTorch implementation. Two working examples are presented in each of our notebooks in the above 
-section. Note that when applying in a different task, this selection setup maybe sensitive to the prompt nature. 
+`notebooks/utils.py` for the PyTorch implementation. Note that when applying in a different task, this selection setup maybe sensitive to the prompt nature and may require some handcrafting of the the textual prompts used to query the model (as is common for most LLM based setups). 
 
 
 ## Installation 
