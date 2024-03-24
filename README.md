@@ -27,8 +27,8 @@ We propose three variants of our framework. (left-top) Just LLM only world knowl
 
 We provide two notebooks to explore our two modality-constrained variants. These models require only an LLM / VLM to operate and can be setup easily. 
 
-* LLM Only: [notebook](.notebooks/llm_only.ipynb) 
-* Single Frame VLM: [notebook](.notebooks/sf_vlm.ipynb) 
+* LLM Only: [notebook](notebooks/llm_only.ipynb) 
+* Single Frame VLM: [notebook](notebooks/sf_vlm.ipynb) 
 
 Our full MVU framework requires EgoSchema videos for inference and involves multiple pretrained models. Refer to next section for using it. 
 
