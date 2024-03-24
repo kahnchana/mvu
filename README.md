@@ -80,9 +80,7 @@ python model_video_infer.py --dataset $DATASET --data-root $DATA_ROOT
 
 
 ## References
-Our work builds over the [LLaVA codebase](https://github.com/haotian-liu/LLaVA/tree/main) and utilizes multiple pretrained models from [HuggingFace](https://huggingface.co).  From the latter, we use three different LLMs ([LLAMA]: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf
-Gemma: https://huggingface.co/google/gemma-7b-it
-)
+Our work builds over the [LLaVA codebase](https://github.com/haotian-liu/LLaVA/tree/main) and utilizes multiple pretrained models from [HuggingFace](https://huggingface.co) (HF).  From HF, we use three different LLMs: [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [LLAMA-2-7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf), and [Gemma-7B](https://huggingface.co/google/gemma-7b-it). We also use [OWL-ViT](https://huggingface.co/google/owlvit-base-patch32) for object detection. We thanks all authors and maintainers of all above codebases for their open-source contributions.
 
 ## Citation
 If you find our work or code useful, please consider citing our paper and leaving a star on our repo. 
