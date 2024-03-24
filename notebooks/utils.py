@@ -1,5 +1,8 @@
-import urllib.request
+import io
 import json
+import requests
+import urllib.request
+import zipfile
 
 import torch
 
@@ -7,6 +10,7 @@ import torch
 DATA_PATHS = {
     "ego_schema_q" : "https://github.com/kahnchana/mvu/releases/download/v1/questions.json",
     "ego_schema_subset_a" : "https://github.com/kahnchana/mvu/releases/download/v1/subset_answers.json",
+    "ego_schema_center_frame": "https://github.com/kahnchana/mvu/releases/download/v1/center_frames.zip"
 }
 
 def load_json_from_web(url):
@@ -114,3 +118,31 @@ def get_ego_schema(opts=None):
         dataset.append(cur)
     
     return dataset
+
+
+def download_and_unzip(url: str, target_folder: str) -> None:
+    """Downloads and unzips a file from a given URL to a target folder
+
+    Args:
+        url (str): The URL of the file to download
+        target_folder (str): The folder to extract the file to
+    """
+    # Download the zip file
+    response = requests.get(url)
+    if response.status_code != 200:
+        print("Failed to download the file")
+        return
+
+    # Unzip the downloaded file
+    with zipfile.ZipFile(io.BytesIO(response.content), 'r') as zip_ref:
+        zip_ref.extractall(target_folder)
+
+    # Print a success message
+    print("File downloaded and unzipped successfully")
+
+
+def download_ego_schema_center_frames(save_path):
+    data_dir = DATA_PATHS['ego_schema_center_frame']
+    download_and_unzip(data_dir, save_path)
+    
+    return f"{save_path}/center_frames"

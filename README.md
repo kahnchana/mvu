@@ -60,7 +60,7 @@ We follow the default instructions in their websites to download these datasets.
 
 ## MVU Framework
 
-We now detail our MVU framework.
+We now detail our MVU framework. This is built over the Single Frame VLM variant. 
 
 ### Frame Selection 
 
@@ -68,5 +68,28 @@ We now detail our MVU framework.
 python model_frame_selection.py
 ```
 
+### Object Centric Modalities
+We provide the pre-extracted data for each modality along with the templates used for language based fusion.
+These will be automatically download in the following scripts. 
+
+### Long Video QnA
+Modify the name of the dataset (EgoSchema, NextQA) and the data root (directory where the dataset was downloaded).
+```
+python model_video_infer.py --dataset $DATASET --data-root $DATA_ROOT
+```
 
 
+## References
+Our work builds over the [LLaVA codebase](https://github.com/haotian-liu/LLaVA/tree/main) and utilizes multiple pretrained models from [HuggingFace](https://huggingface.co).  From the latter, we use three different LLMs ([LLAMA]: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf
+Gemma: https://huggingface.co/google/gemma-7b-it
+)
+
+## Citation
+If you find our work or code useful, please consider citing our paper and leaving a star on our repo. 
+```
+@misc{rana2024mvu,
+      title={Understanding Long Videos in One Multimodal Language Model Pass}, 
+      author={Kanchana Ranasinghe and Xiang Li and Kumara Kahatapitiya and Michael Ryoo},
+      year={2024},
+}
+```
