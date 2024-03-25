@@ -25,7 +25,7 @@ We propose three variants of our framework. (left-top) Just LLM only world knowl
 
 ## Quickstart 
 
-We provide two notebooks to explore our two modality-constrained variants. These models require only an LLM / VLM to operate and can be setup easily. 
+We provide two notebooks to explore our two modality-constrained variants. These models require only an LLM / VLM to operate and can be setup easily. Only the python dependencies listed at top of each notebook need to be installed in a `Python=3.8` environment. Use two different environments for two notebooks (some LLMs require latest HF version incompatible with LLaVA used for VLM). All data will be downloaded automatically (less than 5MB for LLM only / approximately 100MB for SF-VLM). 
 
 * LLM Only: [notebook](notebooks/llm_only.ipynb) 
 * Single Frame VLM: [notebook](notebooks/sf_vlm.ipynb) 
