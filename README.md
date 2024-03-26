@@ -81,7 +81,7 @@ We now detail our MVU framework. This is built over the Single Frame VLM variant
 ### Frame Selection 
 
 ```
-python model_frame_selection.py
+python src/model_frame_selection.py
 ```
 
 ### Object Centric Modalities
@@ -91,7 +91,7 @@ These will be automatically download in the following scripts.
 ### Long Video QnA
 Modify the name of the dataset (EgoSchema, NextQA) and the data root (directory where the dataset was downloaded).
 ```
-python model_video_infer.py --dataset $DATASET --data-root $DATA_ROOT
+python src/model_video_infer.py --dataset $DATASET --data-root $DATA_ROOT
 ```
 
 
