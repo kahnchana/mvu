@@ -5,7 +5,7 @@
 [Kumara Kahatapitiya](https://scholar.google.com/citations?user=ExGkzjQAAAAJ&hl=en), 
 [Michael Ryoo](https://scholar.google.com/citations?user=vcw0TJIAAAAJ&hl=en)
 
-**[Paper Link]()** | **[Project Page](https://kahnchana.github.io/mvu)** 
+**[Paper Link](https://arxiv.org/abs/2403.16998)** | **[Project Page](https://kahnchana.github.io/mvu)** 
 
 
 ## Overview
