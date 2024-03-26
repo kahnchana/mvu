@@ -1,0 +1,8 @@
+@misc{ranasinghe2024understanding,
+      title={Understanding Long Videos in One Multimodal Language Model Pass}, 
+      author={Kanchana Ranasinghe and Xiang Li and Kumara Kahatapitiya and Michael S. Ryoo},
+      year={2024},
+      eprint={2403.16998},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}

@@ -1,0 +1,341 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>MVU</title>
+	<meta property="og:image" content="./resources/icon.png"/>
+	<meta property="og:title" content="MVU" />
+	<meta property="og:description" content="Understanding Long Videos in One Multimodal Language Model Pass" />
+
+	<link rel="icon" type="image/png" href="./resources/icon.png">
+
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<div style="text-align: center;">
+		<span style="font-size:42px">Understanding Long Videos in <br> One Multimodal Language Model Pass </span>
+		<br>
+		<span style="font-size:28px"></span>
+		<br> <br>
+		<table align=center width=800px>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=K2WBZTwAAAAJ&hl=en">Kanchana Ranasinghe</a></span>
+						</center>
+					</td>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=qkyC7KQAAAAJ&hl=en">Xiang Li</a></span>
+						</center>
+					</td>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=ExGkzjQAAAAJ&hl=en">Kumara Kahatapitiya</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br> 
+			<table align=center width=700px>
+				<tr>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=vcw0TJIAAAAJ&hl=en">Michael Ryoo</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+		<br>
+		<br> 
+			<table align=center width=400px>
+				<tr>
+					<td align=center width=120px>
+						<div style="text-align: center;">
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2403.16998'>[Paper]</a></span>
+						</div>
+					</td>
+					<td align=center width=120px>
+						<div style="text-align: center;">
+							<span style="font-size:24px"><a href='https://github.com/kahnchana/mvu'>[GitHub]</a></span><br>
+						</div>
+					</td>
+					<!-- <td align=center width=120px>
+						<div style="text-align: center;">
+							<span style="font-size:24px"><a href='https://github.com/kahnchana/svt/releases/download/v1.0/slides.pptx'>[Slides]</a></span><br>
+						</div>
+					</td> -->
+				</tr>
+			</table>
+		</table>
+		<br>
+	</div>
+	<br> 
+	<br>
+	<table align=center width=80%>
+		<div style="text-align: center; font-size: 24px;">	
+			We propose an LLM-based framework for solving long video question answering benchmarks and discover multiple suprising results which we detail in the following sections.
+		</div>
+	</table>
+	<br>
+	<br>
+	<table align=center width=80%>
+		<div style="text-align: center;"><h1>Only an LLM is enough?</h1></div>
+		<div style="text-align: center;">
+			<table align=center width=80%>
+				<tr>
+					<div style="text-align: center; font-size: 24px;">	
+						We build a simple baseline, <b>LLM-Only</b> as illustrated below that uses zero task specific data.
+					</div>
+				</tr>
+				<br>
+				<tr>
+					<div style="text-align: center;">
+						<img class="round" style="width:100%" src="./resources/llm-only.svg"/>
+					</div>
+				</tr>
+			</table>
+		</div>
+		<tr>
+			<td>
+				<div style="text-align: justify; font-size: 20px;">
+					<ul style="margin: 5%;">
+						<li> Performs on par with SOTA on Long-Video Understanding Benchmarks</li>
+						<li> Accuracy of <b>52.8% on EgoSchema-S</b> and <b>40.1% on Next-QA</b> using only question as input </li>
+						<li> Uses zero task specific information! </li>
+						<li> Answers correctly using strong world knowledge of LLM? </li>
+						<li> Do existing LLM based methods actually use video then? </li>
+					</ul>
+					<!-- We discover how only an LLM with zero  
+					Large Language Models (LLMs), known to contain a strong awareness of world knowledge, have allowed recent approaches to achieve excellent performance on Long-Video Understanding benchmarks, but at high inference costs. 
+					In this work, we first propose Likelihood Selection, a simple technique that unlocks faster inference in autoregressive LLMs for multiple-choice tasks common in long-video benchmarks.
+					In addition to faster inference, we discover the resulting models to yield surprisingly good accuracy on long-video tasks, even with no video specific information. 
+					Building on this, we inject video-specific object-centric information extracted from off-the-shelf pre-trained models and utilize natural language as a medium for information fusion. Our resulting Multimodal Video Understanding (MVU) framework demonstrates state-of-the-art performance across long-video and fine-grained action recognition benchmarks. -->
+				</div>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<br>
+	<table align=center width=80%>
+		<div style="text-align: center;"><h1>Additional single frame?</h1></div>
+		<div style="text-align: center;">
+			<table align=center width=80%>
+				<tr>
+					<div style="text-align: center; font-size: 24px;">	
+						Let's add some visual inputs! We propose <b>SF-VLM</b> or Single-Frame VLM which processes an additional single frame using a VLM as illustrated below.
+					</div>
+				</tr>
+				<br>
+				<tr>
+					<div style="text-align: center;">
+						<img class="round" style="width:85%" src="./resources/sf-vlm.svg"/>
+					</div>
+				</tr>
+			</table>
+		</div>
+		<tr>
+			<td>
+				<div style="text-align: justify; font-size: 20px;">
+					<ul style="margin: 5%;">
+						<li> Outperforms certain SOTA on Long-Video Understanding Benchmarks</li>
+						<li> Accuracy of <b>55.8% on EgoSchema-S</b> and <b>51.2% on Next-QA</b> </li>
+						<li> Answers correctly using only a single frame! </li>
+						<li> Contextual scene information alone highly useful? </li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<br>
+	<div style="text-align: center;"><h1>Our Full Setup: MVU</h1></div>
+	<div style="text-align: center;">
+		<table align=center width=85%>
+			<tr>
+				<div style="text-align: center; font-size: 24px;">	
+					We illustrate our full setup, Multimodal Video Understanding (MVU) below. Checkout our paper and code for more details. 
+				</div>
+			</tr>
+			<tr>
+
+				<td width=600px>
+					<div style="text-align: center;">
+						<img class="round" style="width:100%" src="./resources/intro.png"/>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<hr>
+	<table align=center width=500px>
+		<center><h1>Paper and Supplementary Material</h1></center>
+		<tr>
+			<td><a href="https://arxiv.org/abs/2403.16998"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">
+				<b>Multimodal Video Understanding</b><br>
+<!--				<br>-->
+				(hosted on <a href="https://arxiv.org/abs/2403.16998">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+	<hr>
+
+
+<!--	<table align=center width=900px>-->
+<!--		<tr>-->
+<!--			<td width=400px>-->
+<!--				<left>-->
+<!--					<center><h1>Acknowledgements</h1></center>-->
+<!--					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.-->
+<!--				</left>-->
+<!--			</td>-->
+<!--		</tr>-->
+<!--	</table>-->
+
+<br>
+</body>
+</html>
+
