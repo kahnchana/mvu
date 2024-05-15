@@ -7,6 +7,10 @@
 
 **[Paper Link](https://arxiv.org/abs/2403.16998)** | **[Project Page](https://kahnchana.github.io/mvu)** 
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/understanding-long-videos-in-one-multimodal/zero-shot-video-question-answer-on-egoschema)](https://paperswithcode.com/sota/zero-shot-video-question-answer-on-egoschema?p=understanding-long-videos-in-one-multimodal)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/understanding-long-videos-in-one-multimodal/zero-shot-video-question-answer-on-next-qa)](https://paperswithcode.com/sota/zero-shot-video-question-answer-on-next-qa?p=understanding-long-videos-in-one-multimodal)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/understanding-long-videos-in-one-multimodal/zero-shot-video-question-answer-on-egoschema-1)](https://paperswithcode.com/sota/zero-shot-video-question-answer-on-egoschema-1?p=understanding-long-videos-in-one-multimodal)
+
 
 ## Overview
 > **Abstract:**
