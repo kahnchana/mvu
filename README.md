@@ -105,9 +105,11 @@ Our work builds over the [LLaVA codebase](https://github.com/haotian-liu/LLaVA/t
 ## Citation
 If you find our work or code useful, please consider citing our paper and leaving a star on our repo. 
 ```
-@misc{rana2024mvu,
+@inproceedings{rana2024mvu,
       title={Understanding Long Videos in One Multimodal Language Model Pass}, 
       author={Kanchana Ranasinghe and Xiang Li and Kumara Kahatapitiya and Michael Ryoo},
-      year={2024},
+      booktitle={International Conference on Learning Representations},
+      year={2025},
+      url=https://openreview.net/forum?id=OxKi02I29I
 }
 ```
